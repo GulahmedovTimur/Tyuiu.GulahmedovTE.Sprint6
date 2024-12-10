@@ -7,6 +7,7 @@ namespace Tyuiu.GulahmedovTE.Sprint6.Task0.V22.Lib
         {
             double res = 0.7 * Math.Pow(x, 3) + 1.52 * Math.Pow(x, 2);
             return Math.Round(res, 3);
+
         }
     }
 }

@@ -36,5 +36,10 @@ namespace Tyuiu.GulahmedovTE.Sprint6.Task0.V22
         {
 
         }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

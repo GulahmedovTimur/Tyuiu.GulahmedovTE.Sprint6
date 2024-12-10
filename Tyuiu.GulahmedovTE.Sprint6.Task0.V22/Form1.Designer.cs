@@ -35,6 +35,7 @@
             button3 = new Button();
             textBoxResult = new TextBox();
             groupBox3 = new GroupBox();
+            label1 = new Label();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             groupBox2.SuspendLayout();
@@ -43,6 +44,7 @@
             // 
             // groupBox1
             // 
+            groupBox1.Controls.Add(label1);
             groupBox1.Controls.Add(pictureBox1);
             groupBox1.Location = new Point(25, 44);
             groupBox1.Name = "groupBox1";
@@ -50,12 +52,14 @@
             groupBox1.TabIndex = 0;
             groupBox1.TabStop = false;
             groupBox1.Text = "Условие";
+            groupBox1.Enter += groupBox1_Enter;
             // 
             // pictureBox1
             // 
-            pictureBox1.Location = new Point(299, 22);
+            pictureBox1.Image = Properties.Resources.Снимок_экрана_2024_12_10_215955;
+            pictureBox1.Location = new Point(239, 22);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(211, 127);
+            pictureBox1.Size = new Size(271, 45);
             pictureBox1.TabIndex = 1;
             pictureBox1.TabStop = false;
             // 
@@ -106,6 +110,15 @@
             groupBox3.TabStop = false;
             groupBox3.Text = "Вывод данных";
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(6, 22);
+            label1.Name = "label1";
+            label1.Size = new Size(187, 15);
+            label1.TabIndex = 2;
+            label1.Text = "Вычислить выражение при х = 2";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -119,6 +132,7 @@
             Text = "Form1";
             Load += Form1_Load;
             groupBox1.ResumeLayout(false);
+            groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             groupBox2.ResumeLayout(false);
             groupBox2.PerformLayout();
@@ -136,5 +150,6 @@
         private Button button3;
         private TextBox textBoxResult;
         private GroupBox groupBox3;
+        private Label label1;
     }
 }

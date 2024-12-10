@@ -11,6 +11,7 @@ namespace Tyuiu.GulahmedovTE.Sprint6.Task0.V22.Test
             double res = ds.Calculate(2);
             double wait = 11.68;
             Assert.AreEqual(wait, res);
+
         }
     }
 }
