@@ -3,18 +3,37 @@ namespace Tyuiu.GulahmedovTE.Sprint6.Task7.V10.Lib
 {
     public class DataService : ISprint6Task7V10
     {
-        public int[,] GetMatrix(int[,] matrix)
+        public int[,] GetMatrix(string path)
         {
-            int rows = matrix.GetLength(0) + 1;
-            int colums = matrix.Length / rows;
+            string[] lines = File.ReadAllText(path).Replace('\n', '\r').Split('\r', StringSplitOptions.RemoveEmptyEntries);
 
-            for (int j = 0; j < matrix.GetLength(1); j++)
+            int rows = lines.Length;
+
+
+            int cols = lines[0].Split(';').Length;
+            int[,] matrix = new int[rows, cols];
+
+
+            for (int i = 0; i < rows; i++)
             {
-                if (matrix[4, j] >= 5 && matrix[4, j] <= 10)
+                string[] values = lines[i].Split(';');
+                for (int j = 0; j < cols; j++)
                 {
-                    matrix[4, j] = 0;
+                    matrix[i, j] = Convert.ToInt32(values[j]);
                 }
             }
+
+            if (rows > 4)
+            {
+                for (int j = 0; j < cols; j++)
+                {
+                    if (matrix[4, j] >= 5 && matrix[4, j] < 10)
+                    {
+                        matrix[4, j] = 0;
+                    }
+                }
+            }
+
             return matrix;
         }
     }

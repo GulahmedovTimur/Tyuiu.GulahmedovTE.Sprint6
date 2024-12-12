@@ -11,6 +11,7 @@ namespace Tyuiu.GulahmedovTE.Sprint6.Task7.V10.Test
             FileInfo fileInfo = new FileInfo(path);
             bool fileExists = fileInfo.Exists;
             Assert.AreEqual(true, fileExists);
+
         }
     }
 }
